@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_light">#F0F2ED</color>
+    <color name="red">#DF313A</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#311D96</color>
+    <color name="grayDark">#1A1A1A</color>
+    <color name="grayLight">#F0F0F0</color>
+    <color name="green">#2ED12E</color>
+    <color name="green_alt">#88BF48</color>
+    <color name="grayMedium">#AEAEAE</color>
+</resources>

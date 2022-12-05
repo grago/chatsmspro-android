@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1050461699592",
+    "project_id": "chat-sms-pro",
+    "storage_bucket": "chat-sms-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050461699592:android:0366e9e4454ee9616edbbd",
+        "android_client_info": {
+          "package_name": "com.blkpos.chatsmspro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050461699592-4pidkikab33as4sdmob73eccknc0s5qj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXe7xTFOXUnvykUVGW9CjhCyZRWrxuF8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050461699592-4pidkikab33as4sdmob73eccknc0s5qj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
