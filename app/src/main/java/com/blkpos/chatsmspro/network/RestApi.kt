@@ -1,6 +1,7 @@
 package com.blkpos.chatsmspro.network
 
 import com.blkpos.chatsmspro.model.*
+import com.blkpos.chatsmspro.model.response.LedgerEntriesResponse
 import com.blkpos.chatsmspro.model.response.OauthResponse
 import com.blkpos.chatsmspro.model.response.RestResponse
 import com.blkpos.chatsmspro.model.response.StatResponse
@@ -63,7 +64,7 @@ interface RestApi {
 //
 
     @GET("api/countries.json")
-    fun countries(): Simple<ArrayList<Country>?>
+    fun countries(@Query("customer_id") customerId: String?): Simple<ArrayList<Country>?>
 
     @GET("api/carriers.json")
     fun carriers(@Query("country_id") countryId: Int): Simple<ArrayList<Carrier>?>
@@ -73,6 +74,9 @@ interface RestApi {
 
     @GET("api/user/stats.json")
     fun stats(): Simple<StatResponse?>
+
+    @GET("api/user/ledger_entries.json")
+    fun ledgerEntries(): Simple<LedgerEntriesResponse?>
 
     @POST("api/user/register_token.json")
     fun registerToken(@Body deviceToken: DeviceToken?): Simple<RestResponse?>?

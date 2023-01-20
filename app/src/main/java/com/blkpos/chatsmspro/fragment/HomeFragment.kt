@@ -20,12 +20,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.blkpos.chatsmspro.BuildConfig
 import com.blkpos.chatsmspro.R
 import com.blkpos.chatsmspro.activity.MainActivity
+import com.blkpos.chatsmspro.adapter.LedgerEntryAdapter
 import com.blkpos.chatsmspro.adapter.StatAdapter
 import com.blkpos.chatsmspro.event.UpdateStatsEvent
-import com.blkpos.chatsmspro.model.Config
-import com.blkpos.chatsmspro.model.DeviceToken
-import com.blkpos.chatsmspro.model.Stat
-import com.blkpos.chatsmspro.model.User
+import com.blkpos.chatsmspro.model.*
 import com.blkpos.chatsmspro.receiver.SmsReceiver
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
@@ -38,7 +36,7 @@ import org.greenrobot.eventbus.ThreadMode
 
 
 class HomeFragment : BaseFragment()  {
-    private var stats = ArrayList<Stat>()
+    private var stats = ArrayList<LedgerEntry>()
     private var appConfig: Config? = null
 
     override fun onCreateView(
@@ -73,7 +71,7 @@ class HomeFragment : BaseFragment()  {
         titleTextView.text =  context?.getString(R.string.home_title, "${User.currentUser?.firstName} ${User.currentUser?.lastName}")
 
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = StatAdapter(
+        recyclerView.adapter = LedgerEntryAdapter(
             stats,
             requireContext()
         )
@@ -100,11 +98,11 @@ class HomeFragment : BaseFragment()  {
         sentCountTextView.text = null
         amountToEarnTextView.text = null
 
-        restApi.stats().process { statResponse, throwable ->
+        restApi.ledgerEntries().process { statResponse, throwable ->
 
 
             if(statResponse!=null) {
-                this.stats.addAll(statResponse.stats)
+                this.stats.addAll(statResponse.ledgerEntries)
 
                 activity?.runOnUiThread {
 

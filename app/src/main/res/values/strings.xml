@@ -9,6 +9,8 @@
     <string name="please_complete">Completa la siguiente información de registro</string>
     <string name="signup">Registro</string>
     <string name="signup.welcome">Bienvenido!</string>
+    <string name="signup.customer">Empresa</string>
+    <string name="signup.customer_id">ID de empresa</string>
     <string name="signup.first_name">Nombre</string>
     <string name="signup.last_name">Apellido</string>
     <string name="signup.email">E-mail de contacto</string>
@@ -31,6 +33,9 @@
     <string name="login.signup">Registrarme</string>
     <string name="login.login">Iniciar sesión</string>
     <string name="login.login_error">E-mail o contraseña incorrectos</string>
+    <string name="user.customer.not_found">El ID de empresa no es válido</string>
+    <string name="user.customer.limit_exceeded">Se ha excedido el número máximo de dispositivos para la empresa</string>
+    <string name="user.customer.inactive">La empresa no se encuentra habilitada</string>
     <string name="user.email.not_blank">Debes ingresar tu dirección de e-mail</string>
     <string name="user.email.unique">La dirección de e-mail ingresada ya se encuentra registrada</string>
     <string name="user.email.type">Debes ingresar una dirección de e-mail válida</string>
@@ -66,6 +71,8 @@
     <string name="home.recommend">Recomendar</string>
     <string name="home.refresh">Refrescar</string>
     <string name="home.request_payment">Solicitar pago</string>
+    <string name="home.withdraw_request_pending">Solicitud pendiente</string>
+    <string name="home.withdraw_request_fulfilled">Solicitud procesada el %1$s</string>
     <string name="nav.profile">Mis datos</string>
     <string name="nav.logout">Salir</string>
     <string name="withdraw.title">Solicitar pago</string>
@@ -73,8 +80,8 @@
     <string name="withdraw.draw">Sorteo de un smartphone</string>
     <string name="withdraw.cellphone_credit">Crédito para tu celular</string>
     <string name="withdraw.catalog">Pedí nuestro catálogo</string>
-    <string name="withdraw.enter_account">Ingresá tu cuenta</string>
-    <string name="withdraw.enter_account_hint">EMAIL REGISTRADO EN MERCADOPAGO</string>
+    <string name="withdraw.enter_account">¿Cómo te pagamos?</string>
+    <string name="withdraw.enter_account_hint">Ingresa cómo quieres recibir tu pago</string>
     <string name="permissions.isntructions">Dirígete a Configuración > Aplicaciones > SMSCa$h > Optimizar el uso de la batería, y desactiva la optimización de la batería para esta aplicación.</string>
     <string name="permissions.retry">Reintentar</string>
     <string name="verification.title">Selecciona cómo deseas verificar tu número</string>

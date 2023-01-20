@@ -64,7 +64,15 @@
         <action
             android:id="@+id/action_SignUpFragment_to_CountriesFragment"
             app:destination="@id/CountriesFragment"
-            />
+            >
+
+            <argument
+                android:name="customerId"
+                app:argType="string"
+                app:nullable="true"
+                />
+
+        </action>
 
         <action
             android:id="@+id/action_SignUpFragment_to_CarriersFragment"
@@ -211,6 +219,14 @@
         android:id="@+id/CountriesFragment"
         android:name="com.blkpos.chatsmspro.fragment.CountriesFragment"
         tools:layout="@layout/fragment_countries">
+
+
+        <argument
+            android:name="customerId"
+            app:argType="string"
+            app:nullable="true"
+            />
+
 
     </fragment>
 

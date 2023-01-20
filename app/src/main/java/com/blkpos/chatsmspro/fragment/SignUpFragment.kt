@@ -77,6 +77,7 @@ class SignUpFragment : BaseFragment() {
 
         InputUtils.setupTapOutside(baseLayout, requireActivity())
 
+        customerIdentifierEditText.hint = customerIdentifierEditText.hint.toString().uppercase()
         firstNameEditText.hint = firstNameEditText.hint.toString().uppercase()
         lastNameEditText.hint = lastNameEditText.hint.toString().uppercase()
         emailAddressEditText.hint = emailAddressEditText.hint.toString().uppercase()
@@ -131,7 +132,7 @@ class SignUpFragment : BaseFragment() {
 
 
 
-        findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToCountriesFragment())
+        findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToCountriesFragment(customerIdentifierEditText.text.toString()))
 
 
     }
@@ -189,6 +190,7 @@ class SignUpFragment : BaseFragment() {
             user = User()
 
 //        user?.plainPassword = passwordEditText.text.toString()
+        user?.customerIdentifier = customerIdentifierEditText.text.toString()
         user?.firstName = firstNameEditText.text.toString()
         user?.lastName = lastNameEditText.text.toString()
         user?.email = emailAddressEditText.text.toString()
@@ -434,7 +436,7 @@ class SignUpFragment : BaseFragment() {
 
     private fun fetchCountries(country: Country?, closure: (String?) -> Unit ){
 
-        restApi.countries().process { countries, throwable ->
+        restApi.countries(customerIdentifierEditText.text.toString()).process { countries, throwable ->
 
 
 

@@ -14,7 +14,21 @@ import kotlinx.android.synthetic.main.fragment_carriers.*
 class CountriesFragment : BaseFragment() {
 
     private var countries = ArrayList<Country>()
+    private var customerId: String? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        if (arguments != null) {
+            this.customerId =
+                CountriesFragmentArgs.fromBundle(requireArguments()).customerId
+        }
+
+        super.onCreate(savedInstanceState)
+
+
+
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -72,7 +86,7 @@ class CountriesFragment : BaseFragment() {
 
         countries.clear()
 
-        restApi.countries().process { countries, throwable ->
+        restApi.countries(customerId).process { countries, throwable ->
 
 
             if(countries!=null) this.countries.addAll(countries)

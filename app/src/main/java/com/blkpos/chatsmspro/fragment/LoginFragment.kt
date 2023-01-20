@@ -50,7 +50,7 @@ class LoginFragment : BaseFragment() {
     private val onCountryButtonClicked = View.OnClickListener {
 
 
-        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCountriesFragment())
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCountriesFragment(null))
 
 
     }

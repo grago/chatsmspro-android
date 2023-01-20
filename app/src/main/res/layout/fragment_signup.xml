@@ -29,6 +29,21 @@
             />
 
         <EditText
+            android:id="@+id/customerIdentifierEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/signup.customer_id"
+            android:inputType="text"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            style="@style/Theme.CHATSMSPRO.Widget.EditText"
+
+            />
+
+        <EditText
             android:id="@+id/firstNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

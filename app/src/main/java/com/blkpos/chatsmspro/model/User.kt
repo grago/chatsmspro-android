@@ -9,6 +9,8 @@ data class User(
     @Expose(serialize = true, deserialize = true)
     var id: Int? = null,
     @Expose(serialize = true, deserialize = true)
+    var customerIdentifier: String? = null,
+    @Expose(serialize = true, deserialize = true)
     var email: String? = null,
     @Expose(serialize = true, deserialize = true)
     var plainPassword: String? = null,
